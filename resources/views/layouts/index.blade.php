@@ -307,6 +307,7 @@ $display2 = 'd-none';
         <script src="/vendor/charts/c3charts/C3chartjs.js"></script>
         <script src="/libs/js/dashboard-ecommerce.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.js"></script>
+        <script src="script.js"></script>
     </body>
 
     </html>
