@@ -16,3 +16,7 @@ $('#cover').dropify([
 $(window).on('load', function () {
     $("#preloader").fadeOut("slow");
 });
+
+$('#search').on('keydown', function(){
+    console.log('ok');
+});

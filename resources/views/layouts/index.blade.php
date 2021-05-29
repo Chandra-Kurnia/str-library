@@ -11,7 +11,7 @@ $display2 = 'd-none';
 }
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 @section('tittle', 'DashBoard')
@@ -21,8 +21,8 @@ $display2 = 'd-none';
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
         <link href="/vendor/fonts/circular-std/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="/libs/css/style.css">
         <link rel="stylesheet" href="/vendor/fonts/fontawesome/css/fontawesome-all.css">
         <link rel="stylesheet" href="/vendor/charts/chartist-bundle/chartist.css">
@@ -53,7 +53,7 @@ $display2 = 'd-none';
             <!-- ============================================================== -->
             <div class="dashboard-header">
                 <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                    <img src="images/icon.png" width="40px" class="ml-2 mr-0" alt="">
+                    <img src="/images/icon.png" width="40px" class="ml-2 mr-0" alt="">
                     <a class="navbar-brand" href="/">SteachLib</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -307,7 +307,7 @@ $display2 = 'd-none';
         <script src="/vendor/charts/c3charts/C3chartjs.js"></script>
         <script src="/libs/js/dashboard-ecommerce.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.js"></script>
-        <script src="script.js"></script>
+        <script src="/js/script.js"></script>
     </body>
 
     </html>
