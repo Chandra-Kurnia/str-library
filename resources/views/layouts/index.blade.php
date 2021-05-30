@@ -33,6 +33,7 @@ $display2 = 'd-none';
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/fonts/dropify.ttf">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/fonts/dropify.svg">
+        <link rel="stylesheet" href="/css/colomn.css">
         <link rel="icon" href="/images/icon.png">
 
     </head>

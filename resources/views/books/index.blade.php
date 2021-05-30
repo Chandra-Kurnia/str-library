@@ -108,21 +108,24 @@ $display = 'd-none';
                 </div>
             </div>
 
-            <div class="row {{ $display2 }}">
-                @foreach ($books as $book)
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
-                        <div class="card">
-                            <img class="card-img-top img-fluid"src="/images/cover-books/{{ $book->cover }}"
-                                alt="Card image cap">
-                            <div class="card-body">
-                                <h3 class="card-title">{{ $book->title }}</h3>
-                                <p class="card-text">a {{ $book->category }} book by {{ $book->author }}, which was published on
-                                    the {{ $book->date_publish }}</p>
-                                <a href="/borrow/{{ $book->book_id }}" class="btn btn-primary">borrow</a>
+            <div class="flex">
+                <div class="row{{ $display2 }}">
+                    @foreach ($books as $book)
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                            {{-- col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 --}}
+                            <div class="card">
+                                <img class="card-img-top img-fluid"src="/images/cover-books/{{ $book->cover }}"
+                                    alt="Card image cap">
+                                <div class="card-body">
+                                    <h3 class="card-title">{{ $book->title }}</h3>
+                                    <p class="card-text">a {{ $book->category }} book by {{ $book->author }}, which was published on
+                                        the {{ $book->date_publish }}</p>
+                                    <a href="/borrow/{{ $book->book_id }}" class="btn btn-primary">borrow</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
             <!-- ============================================================== -->
             <!-- end basic table  -->

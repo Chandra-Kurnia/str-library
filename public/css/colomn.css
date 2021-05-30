@@ -1,0 +1,22 @@
+/* .flex{
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.flex .item-flex{
+    width: 250px;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.flex .item-flex .card{
+    height: 620px;
+}
+
+.flex .btn{
+    background-color: rgb(0, 110, 255);
+    color: white;
+    position: relative;
+} */

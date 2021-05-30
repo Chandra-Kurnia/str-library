@@ -18,5 +18,5 @@ $(window).on('load', function () {
 });
 
 $('#search').on('keydown', function(){
-    console.log('ok');
+    console.log($(this).val());
 });
