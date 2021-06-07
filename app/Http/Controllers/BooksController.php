@@ -22,7 +22,7 @@ class BooksController extends Controller
     public function index($category)
     {
         //
-        $books = DB::table('books')->where(['category'=>$category, 'status' => 'avaiable'])->paginate(5);
+        $books = DB::table('books')->where(['category'=>$category, 'status' => 'avaiable'])->simplePaginate(5);
         return view('books.index', ['books' => $books], ['category' => $category]);
     }
 

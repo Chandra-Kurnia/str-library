@@ -92,6 +92,7 @@ $display = 'd-none';
                                             </td>
                                         </tr>
                                     @endforeach
+                                    {{$books->appends(Request::all())->links()}}
                                 </tbody>
                                 <tfoot>
                                     <tr>
