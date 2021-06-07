@@ -54,10 +54,13 @@ $display = 'd-none';
                                 </label>
                             </div>
                             <div class="col-6 text-right">
-                                <label for="search">
-                                    <input type="text" name="search" id="search" class="form-control form-control-sm"
-                                        placeholder="Search" autocomplete="off">
-                                </label>
+                                @csrf
+                                <form action="/books/search/{{ $category }}" method="GET">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" autocomplete="off" placeholder="Search here" aria-label="Recipient's username" aria-describedby="basic-addon2" name="keyword">
+                                        <button type="submit" class="input-group-text" id="basic-addon2">search</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                         <table class="table table-striped table-bordered first">
@@ -85,8 +88,7 @@ $display = 'd-none';
                                             <td>{{ $book->language }}</td>
                                             <td class="text-center">
                                                 <a href="/delete/{{ $book->book_id }}" class="btn btn-sm btn-danger mt-1">hapus</a>
-                                                <a href="/update-book/{{ $book->book_id }}"
-                                                    class="btn btn-sm btn-success mt-1">Update</a>
+                                                <a href="/update-book/{{ $book->book_id }}" class="btn btn-sm btn-success mt-1">Update</a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -109,7 +111,7 @@ $display = 'd-none';
             </div>
 
             <div class="flex">
-                <div class="row{{ $display2 }}">
+                <div class="row {{ $display2 }}">
                     @foreach ($books as $book)
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                             {{-- col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12 --}}

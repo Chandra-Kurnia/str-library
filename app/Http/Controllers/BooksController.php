@@ -22,7 +22,7 @@ class BooksController extends Controller
     public function index($category)
     {
         //
-        $books = DB::table('books')->where(['category'=>$category, 'status' => 'avaiable'])->get();
+        $books = DB::table('books')->where(['category'=>$category, 'status' => 'avaiable'])->paginate(5);
         return view('books.index', ['books' => $books], ['category' => $category]);
     }
 
@@ -84,7 +84,9 @@ class BooksController extends Controller
             'status' => $request['status'],
         ]);
 
-        return $this->create();
+        // return $this->create();
+        $category = $request['category'];
+        return $this->index($category);
 
     }
 
@@ -131,7 +133,7 @@ class BooksController extends Controller
             'date-publish' => ['required', 'string', 'max:30'],
             'language' => ['required', 'string', 'max:15'],
             'category' => ['required', 'string', 'max:15'],
-            'status' => ['required', 'string', 'max:15'],
+            // 'status' => ['required', 'string', 'max:15'],
          ]);
 
         $slug = str_replace(' ', '-', $request['tittle']);
@@ -148,7 +150,8 @@ class BooksController extends Controller
             'language' => $request['language'],
         ]);
 
-        return $this->create();
+        $category = $request['category'];
+        return $this->index($category);
     }
 
     /**
@@ -161,8 +164,7 @@ class BooksController extends Controller
     {
         //
         DB::table('books')->where('book_id', $id)->delete();
-
-        return view('menus.home');
+        return redirect('home');
     }
 
     public function borrow(request $request, $id){
@@ -196,6 +198,13 @@ class BooksController extends Controller
         returnedBook::truncate();
 
         return \redirect('lib-act/returnedBooks');
+    }
+
+    public function search(request $request, $category){
+        $keyword = $request['keyword'];
+
+        $books = DB::table('books')->where(['category'=>$category, 'status' => 'avaiable'])->get();
+        return view('books.index', ['books' => $books], ['category' => $category]);
     }
 }
 

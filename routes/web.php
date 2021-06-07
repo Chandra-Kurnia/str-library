@@ -31,8 +31,9 @@ Route::get('/create-book', 'BooksController@create');
 Route::post('/create-book', 'BooksController@store');
 Route::get('/update-book/{id}', 'BooksController@edit');
 Route::post('/update-book/{id}', 'BooksController@update');
-Route::get('/books/category/{category}', 'BooksController@index'); //show category
+Route::get('/books/category/{category}', 'BooksController@index')->name('category'); //show category
 Route::get('/delete/{id}', 'BooksController@destroy');
+Route::get('/books/search/{category}', 'BooksController@search');
 
 //users-siswa-borrow
 Route::get('/borrow/{id}', 'BooksController@show');
