@@ -55,9 +55,9 @@ $display = 'd-none';
                             </div>
                             <div class="col-6 text-right">
                                 @csrf
-                                <form action="/books/search/{{ $category }}" method="GET">
+                                <form action="/books/search/{{ $category }}/" method="GET">
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" autocomplete="off" placeholder="Search here" aria-label="Recipient's username" aria-describedby="basic-addon2" name="keyword">
+                                        <input type="text" class="form-control" autocomplete="off" placeholder="Search" aria-label="Recipient's username" aria-describedby="basic-addon2" name="keyword">
                                         <button type="submit" class="input-group-text" id="basic-addon2">search</button>
                                     </div>
                                 </form>

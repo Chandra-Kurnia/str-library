@@ -296,7 +296,7 @@ $display2 = 'd-none';
         <!-- main js -->
         <script src="/libs/js/main-js.js"></script>
         <!-- chart chartist js -->
-        <script src="/vendor/charts/chartist-bundle/chartist.min.js"></script>
+        {{-- <script src="/vendor/charts/chartist-bundle/chartist.min.js"></script>
         <!-- sparkline js -->
         <script src="/vendor/charts/sparkline/jquery.sparkline.js"></script>
         <!-- morris js -->
@@ -305,7 +305,7 @@ $display2 = 'd-none';
         <!-- chart c3 js -->
         <script src="/vendor/charts/c3charts/c3.min.js"></script>
         <script src="/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
-        <script src="/vendor/charts/c3charts/C3chartjs.js"></script>
+        <script src="/vendor/charts/c3charts/C3chartjs.js"></script> --}}
         <script src="/libs/js/dashboard-ecommerce.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.js"></script>
         <script src="/js/script.js"></script>

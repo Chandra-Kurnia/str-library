@@ -34,6 +34,7 @@ Route::post('/update-book/{id}', 'BooksController@update');
 Route::get('/books/category/{category}', 'BooksController@index')->name('category'); //show category
 Route::get('/delete/{id}', 'BooksController@destroy');
 Route::get('/books/search/{category}', 'BooksController@search');
+Route::get('books/category/{category}/search', 'BooksController@search'); //search
 
 //users-siswa-borrow
 Route::get('/borrow/{id}', 'BooksController@show');
