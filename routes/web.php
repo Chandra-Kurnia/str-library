@@ -34,12 +34,12 @@ Route::post('/update-book/{id}', 'BooksController@update');
 Route::get('/books/category/{category}', 'BooksController@index')->name('category'); //show category
 Route::get('/delete/{id}', 'BooksController@destroy');
 Route::get('/books/search/{category}', 'BooksController@search');
-Route::get('books/category/{category}/search', 'BooksController@search'); //search
 
 //users-siswa-borrow
 Route::get('/borrow/{id}', 'BooksController@show');
 Route::post('/borrow/{id}', 'BooksController@borrow');
 Route::get('/myBorrowedBook/{id}', 'BooksController@showBorrowed');
+
 //user-act
 Route::get('/returned/{id}', 'ReturnedBookController@store');
 Route::get('/unverification/{id}', 'ReturnedBookController@unverification');

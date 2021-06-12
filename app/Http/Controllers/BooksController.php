@@ -19,11 +19,16 @@ class BooksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($category)
+    public function index($category,Request $request)
     {
         //
-        $books = DB::table('books')->where(['category'=>$category, 'status' => 'avaiable'])->paginate(5);
-        return view('books.index', ['books' => $books], ['category' => $category]);
+        if($request->keyword){
+            $books = DB::table('books')->where(['category'=>$category, 'status' => 'avaiable'])->where('title', 'like', '%' . $request->keyword . '%')->paginate(5);
+            return view('books.index', ['books' => $books], ['category' => $category]);
+        }else{
+            $books = DB::table('books')->where(['category'=>$category, 'status' => 'avaiable'])->paginate(5);
+            return view('books.index', ['books' => $books], ['category' => $category]);
+        }
     }
 
     /**
@@ -200,11 +205,5 @@ class BooksController extends Controller
         return \redirect('lib-act/returnedBooks');
     }
 
-    public function search(request $request, $category){
-        $keyword = $request['keyword'];
-
-        $books = DB::table('books')->where(['category'=>$category, 'status' => 'avaiable', 'title' => $keyword])->orWhere('title', 'like', '%' . $keyword . '%')->get();
-        return view('books.index', ['books' => $books], ['category' => $category]);
-    }
 }
 

@@ -17,6 +17,7 @@ $(window).on('load', function () {
     $("#preloader").fadeOut("slow");
 });
 
-$('#search').on('keydown', function(){
+$('#keyword').on('keydown', function(){
     console.log($(this).val());
+    // $('#table').load('/books/adventure/?keyword=' + $('#keyword').val());
 });

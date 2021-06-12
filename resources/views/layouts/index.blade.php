@@ -271,7 +271,7 @@ $display2 = 'd-none';
         <!-- ============================================================== -->
         <div class="dashboard-wrapper">
             <div class="dashboard-ecommerce">
-                <div class="container-fluid dashboard-content ">
+                <div class="container-fluid dashboard-content">
                     @yield('content')
                 </div>
             </div>
